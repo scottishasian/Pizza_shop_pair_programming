@@ -26,7 +26,8 @@ end
 post '/pizzas/:id/update' do
   @pizza = Pizza.new(params)
   @pizza.update
-  redirect '/pizzas'     # Does ID change with update?
+  str = '/pizzas/' + @pizza.id.to_s
+  redirect str    # Does ID change with update?
 end
 
 post '/pizzas/:id/delete' do
