@@ -1,0 +1,30 @@
+<form method="post" action="/pizzas/<%= @pizza.id %>/update">
+  <label for="first-name"> First Name: </label>
+  <input id="first-name" type="text" value="<%= @pizza.first_name %>" name="first_name"/>
+  <br></br>
+  <label for="last-name"> Last Name: </label>
+  <input id="last-name" type="text" value="<%= @pizza.last_name %>" name="last_name" />
+  <br></br>
+  <label for="pizza-select"> Select a pizza: </label>
+  <select id="pizza-select" value="<%= @pizza.topping %>" name="topping">
+    <option value="Margherita">Margherita</option>
+    <option value="Bowser-Special">Bowser Special</option>
+    <option value="Italian-sausage">Italian Sausage</option>
+    <option value="Pepperoni">Pepperoni</option>
+  </select>
+  <br></br>
+  <label for="quantity"> Quantity: </label>
+  <input id="quantity" value="<%= @pizza.quantity %>" min=1 type="number" name="quantity" />
+  <br></br>
+  <input type="submit" value="Update Order" />
+</form>
+
+
+<!-- form is a method where you can input details. -->
+<!-- text field where you can input.
+first_name is what will be input into the server. -->
+<!-- /> is a self closing element like images and inputs. -->
+
+<!--<select> is for drop down tables. every item in  a select is an option. -->
+
+<!-- get/pizzas and post/pizzas are completly different things. -->
